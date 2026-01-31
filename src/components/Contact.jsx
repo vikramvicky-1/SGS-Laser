@@ -31,6 +31,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setLoading(true);
     setStatus({ type: "", message: "" });
 
@@ -335,6 +336,7 @@ const Contact = () => {
                 )}
 
                 <button
+                  type="submit"
                   disabled={loading}
                   className="w-full bg-secondary text-primary py-6 rounded-2xl font-black text-xl shadow-xl hover:shadow-secondary/20 hover:-translate-y-1 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-3 group"
                 >
