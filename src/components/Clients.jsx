@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../assets/image-mapping";
+import { optimizeCloudinaryUrl } from "../utils/image-optimizer";
 
 const Clients = () => {
   const clients = Object.values(images.clients);
@@ -33,9 +34,11 @@ const Clients = () => {
               className="flex-shrink-0 hover:grayscale-0 transition-all duration-500"
             >
               <img
-                src={logo}
+                src={optimizeCloudinaryUrl(logo, { height: 64, crop: 'limit' })}
                 alt={`Client Logo`}
                 className="h-12 md:h-16 w-auto object-contain"
+                height="64"
+                loading="lazy"
               />
             </div>
           ))}

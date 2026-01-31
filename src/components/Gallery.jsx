@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, Plus } from "lucide-react";
 import { images } from "../assets/image-mapping";
+import { optimizeCloudinaryUrl } from "../utils/image-optimizer";
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -82,9 +83,11 @@ const Gallery = () => {
                 className="group relative aspect-square overflow-hidden rounded-[32px] shadow-sm cursor-zoom-in bg-gray-50 border border-gray-100"
               >
                 <img
-                  src={img}
+                  src={optimizeCloudinaryUrl(img, { width: 400, height: 400 })}
                   alt={`Sri Guru Sai Laser ${activeTab} - Precision Laser Cutting Bengaluru project ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  width="400"
+                  height="400"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -131,7 +134,7 @@ const Gallery = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              src={selectedImage}
+              src={optimizeCloudinaryUrl(selectedImage, { width: 1200, height: 1200, crop: 'limit' })}
               className="max-w-full max-h-[90vh] rounded-2xl object-contain shadow-2xl"
             />
             <button className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors">

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { images } from "../assets/image-mapping";
+import { optimizeCloudinaryUrl } from "../utils/image-optimizer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +82,7 @@ const Navbar = () => {
           onClick={(e) => scrollToSection(e, "home")}
         >
           <img
-            src={images.logos.sgs}
+            src={optimizeCloudinaryUrl(images.logos.sgs, { height: 80, crop: 'limit' })}
             alt="Sri Guru Sai Laser"
             className="h-8 md:h-10 w-auto"
           />
@@ -196,7 +197,7 @@ const Navbar = () => {
                   <span className="text-sm font-bold">Call Us</span>
                 </a>
                 <a
-                  href="mailto:srigurusailaser@gmail.com"
+                  href="mailto:info@sgslaser.in"
                   className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl"
                 >
                   <Mail size={20} className="text-secondary" />

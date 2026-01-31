@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Send, ArrowRight } from 'lucide-react'
-import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({
@@ -24,6 +23,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' })
 
     try {
+      const emailjs = (await import('@emailjs/browser')).default
       // Note: User needs to provide their own keys in EmailJS dashboard
       const result = await emailjs.send(
         'YOUR_SERVICE_ID', 
@@ -76,7 +76,7 @@ const Contact = () => {
               <a href="https://wa.me/919844327471" aria-label="Chat on WhatsApp" className="w-14 h-14 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-lg hover:-translate-y-2 transition-all"><MessageCircle size={28} fill="currentColor" /></a>
               <a href="https://www.instagram.com/sgslsrigurusailaser" aria-label="Follow us on Instagram" className="w-14 h-14 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white rounded-2xl flex items-center justify-center shadow-lg hover:-translate-y-2 transition-all"><Instagram size={28} /></a>
               <a href="tel:9844327471" aria-label="Call Us" className="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg hover:-translate-y-2 transition-all"><Phone size={28} /></a>
-              <a href="mailto:srigurusailaser@gmail.com" aria-label="Email Us" className="w-14 h-14 bg-secondary text-primary rounded-2xl flex items-center justify-center shadow-lg hover:-translate-y-2 transition-all"><Mail size={28} /></a>
+              <a href="mailto:info@sgslaser.in" aria-label="Email Us" className="w-14 h-14 bg-secondary text-primary rounded-2xl flex items-center justify-center shadow-lg hover:-translate-y-2 transition-all"><Mail size={28} /></a>
             </div>
           </motion.div>
 

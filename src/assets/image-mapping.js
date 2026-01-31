@@ -1,74 +1,89 @@
-
-// Base URL for images. Change this to your Cloudinary base URL later.
-// Example: const BASE_URL = 'https://res.cloudinary.com/your-cloud-name/image/upload/';
-const BASE_URL = '';
-
-const getImageUrl = (path) => {
-  if (BASE_URL) {
-    return `${BASE_URL}${path}`;
-  }
-  // For local development with Vite
-  return new URL(`./${path}`, import.meta.url).href;
-};
-
 export const images = {
   logos: {
-    cortex: getImageUrl('cortexlogo.png'),
-    sgs: getImageUrl('sgslogopng.png'),
+    cortex:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871873/cortexlogo_ejrh3i.png",
+    sgs: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871882/sgslogopng_uev1qo.png",
   },
   cards: {
-    acrylicCutting: getImageUrl('Cards/Acrylic Cutting.jpg'),
-    digitalPrinting: getImageUrl('Cards/DIGITALPRINTING.jpg'),
-    fabricBanner: getImageUrl('Cards/FABRIC BANNER.jpg'),
-    houseNamePlate: getImageUrl('Cards/HOUSENAMEPLATE.webp'),
-    ledSignBoard: getImageUrl('Cards/LEDSIGNBOARDS.jpg'),
-    mugPrinting: getImageUrl('Cards/MUGPRINTING.jpg'),
-    rubberStamp: getImageUrl('Cards/Rubberstamp.jpg'),
-    trophyEngraving: getImageUrl('Cards/Trophy Engraving.jpg'),
-    vinylStickers: getImageUrl('Cards/Vinyl Stickers.jpg'),
+    acrylicCutting:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870788/Acrylic_Cutting_lfyujw.avif",
+    digitalPrinting:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870787/DIGITALPRINTING_f4wnt4.webp",
+    fabricBanner:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870788/FABRIC_BANNER_ghlnxu.avif",
+    houseNamePlate:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870789/HOUSENAMEPLATE_od5yzp.webp",
+    ledSignBoard:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870787/LEDSIGNBOARDS_dmqhpp.avif",
+    mugPrinting:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870788/MUGPRINTING_gcucje.avif",
+    rubberStamp:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870788/Rubberstamp_lrp3rr.webp",
+    trophyEngraving:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870788/Trophy_Engraving_b0ajod.avif",
+    vinylStickers:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870789/Vinyl_Stickers_t017fc.avif",
   },
   machines: {
-    co2Laser: getImageUrl('Machine/CO2 Acrylic Laser cutting machine .png'),
-    ecoSolvent: getImageUrl('Machine/Eco solvent machine 6ft.png'),
-    engravingJpg: getImageUrl('Machine/Engraving machine .jpg'),
-    engravingPng: getImageUrl('Machine/Engraving machine .png'),
-    mugPrinting: getImageUrl('Machine/mug printing machine .png'),
-    plotter: getImageUrl('Machine/plotter machine .png'),
+    co2Laser:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870803/CO2_Acrylic_Laser_cutting_machine_xzslfn.png",
+    ecoSolvent:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870800/Eco_solvent_machine_6ft_oy10dr.png",
+    engravingJpg:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870794/Engraving_machine_pyb4jn.jpg",
+    engravingPng:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870798/Engraving_machine_ivl8ys.png",
+    mugPrinting:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870800/mug_printing_machine_eo6989.png",
+    plotter:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870801/plotter_machine_wcyecc.png",
   },
   clients: {
-    logo1: getImageUrl('Our Clients/LOGO1.jpg'),
-    logo2: getImageUrl('Our Clients/LOGO2.jpg'),
-    logo3: getImageUrl('Our Clients/LOGO3.png'),
-    logo4: getImageUrl('Our Clients/LOGO4.png'),
-    logo5: getImageUrl('Our Clients/LOGO5.png'),
-    logo6: getImageUrl('Our Clients/LOGO6.png'),
+    logo1:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870805/LOGO1_kzc6e5.jpg",
+    logo2:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870805/LOGO5_zjlknu.png",
+    logo3:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870806/LOGO2_oqnrx7.jpg",
+    logo4:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870806/LOGO3_o9rwy8.png",
+    logo5:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870806/LOGO4_ktaxcp.png",
+    logo6:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769870806/LOGO6_ayihj6.png",
   },
   works: {
-    p1: getImageUrl('Works/p1.jpg'),
-    p2: getImageUrl('Works/p2.jpg'),
-    p3: getImageUrl('Works/p3.jpg'),
-    p4: getImageUrl('Works/p4.jpg'),
-    p5: getImageUrl('Works/p5.jpg'),
-    p6: getImageUrl('Works/p6.jpg'),
-    p7: getImageUrl('Works/p7.jpg'),
-    p8: getImageUrl('Works/p8.jpg'),
-    p9: getImageUrl('Works/p9.jpg'),
-    p10: getImageUrl('Works/p10.jpg'),
-    img1: getImageUrl('Works/IMG-20251015-WA0016.jpeg'),
-    img2: getImageUrl('Works/IMG-20251021-WA0056.jpg'),
-    img3: getImageUrl('Works/IMG-20251021-WA0061.jpg'),
-    img4: getImageUrl('Works/IMG-20251022-WA0095.jpg'),
-    img5: getImageUrl('Works/IMG-20251026-WA0028.jpg'),
-    img6: getImageUrl('Works/IMG-20251026-WA0030.jpg'),
-    img7: getImageUrl('Works/IMG-20251103-WA0107.jpg'),
-    img8: getImageUrl('Works/IMG-20251121-WA0010.jpg'),
-    img9: getImageUrl('Works/IMG-20251121-WA0015.jpg'),
-    img10: getImageUrl('Works/IMG20251022213635.jpg'),
-    img11: getImageUrl('Works/IMG20251102210039.jpg'),
-    img12: getImageUrl('Works/IMG20251110215210.jpg'),
-    img13: getImageUrl('Works/IMG20251116200631.jpg'),
-    img14: getImageUrl('Works/IMG20251124221008.jpg'),
-  }
+    p1: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871656/IMG20251124221008_mkal2m.jpg",
+    p2: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871651/IMG20251102210039_lppsj5.jpg",
+    p3: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871646/IMG20251110215210_aa149b.jpg",
+    p4: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871645/p9_h7ggbz.jpg",
+    p5: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871645/p8_cosnbu.jpg",
+    p6: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871644/p5_huod3z.jpg",
+    p7: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871644/p7_ospuvi.jpg",
+    p8: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871644/p6_wvdt6l.jpg",
+    p9: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871643/p4_mpclnk.jpg",
+    p10: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871643/p3_ttrxu1.jpg",
+    img1: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871642/IMG20251116200631_icc3kr.jpg",
+    img2: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871642/p2_yr0sdt.jpg",
+    img3: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871641/p10_sxj0sk.jpg",
+    img4: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871639/p1_v8vyv2.jpg",
+    img5: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871639/IMG20251022213635_dv81ft.jpg",
+    img6: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871632/IMG-20251026-WA0028_hxqvfb.jpg",
+    img7: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871632/IMG-20251103-WA0107_y1bv3n.jpg",
+    img8: "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871632/IMG-20251121-WA0015_uyi6kx.jpg",
+    img10:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871631/IMG-20251121-WA0010_wjv3gm.jpg",
+    img11:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871631/IMG-20251026-WA0030_dye5id.jpg",
+    img12:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871631/IMG-20251015-WA0016_rvmxhr.jpg",
+    img13:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871630/IMG-20251021-WA0056_fgvb6c.jpg",
+    img14:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871630/IMG-20251021-WA0061_mcipj6.jpg",
+    img15:
+      "https://res.cloudinary.com/djdfmvg6b/image/upload/v1769871630/IMG-20251022-WA0095_ply6tt.jpg",
+  },
 };
 
 export default images;

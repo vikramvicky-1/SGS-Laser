@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { images } from "../assets/image-mapping";
+import { optimizeCloudinaryUrl } from "../utils/image-optimizer";
 
 const Services = () => {
   const [showMore, setShowMore] = useState(false);
@@ -130,11 +131,14 @@ const Services = () => {
                 transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
                 className="bg-white rounded-[32px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-2xl transition-all group flex flex-col h-full border border-gray-100"
               >
-                <div className="h-[280px] overflow-hidden relative">
+                <div className="h-[280px] overflow-hidden relative bg-gray-100">
                   <img
-                    src={service.image}
+                    src={optimizeCloudinaryUrl(service.image, { width: 600, height: 400 })}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    width="600"
+                    height="400"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-md text-primary text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">

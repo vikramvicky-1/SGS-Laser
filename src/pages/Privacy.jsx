@@ -91,7 +91,7 @@ const Privacy = () => {
             <p>For any privacy-related queries, please contact:</p>
             <p><strong>Sri Guru Sai Laser</strong></p>
             <p><strong>Business Address:</strong> <a href="https://maps.app.goo.gl/uEsAJgvhY2aRFrNN8?g_st=aw" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-all">#02, Narmada Layout, 2nd Cross, Opp.gardn City University Parking, Kithignur Main Road, Bengaluru</a></p>
-            <p><strong>Email ID:</strong> srigurusailaser@gmail.com</p>
+            <p><strong>Email ID:</strong> info@sgslaser.in</p>
             <p><strong>WhatsApp number:</strong> +91 7411026612</p>
           </div>
         </div>

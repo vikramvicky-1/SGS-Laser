@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { images } from '../assets/image-mapping'
 import Counter from './Counter'
+import { optimizeCloudinaryUrl } from '../utils/image-optimizer'
 
 const About = () => {
   const stats = [
@@ -22,11 +23,14 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative group"
           >
-            <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-square">
+            <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-square bg-gray-100">
               <img 
-                src={images.works.img12} 
+                src={optimizeCloudinaryUrl(images.works.img12, { width: 800, height: 800 })} 
                 alt="Our Workshop" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                width="800"
+                height="800"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
             </div>

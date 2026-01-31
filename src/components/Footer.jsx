@@ -87,7 +87,7 @@ const Footer = () => {
                 Icon: Mail,
                 label: "Email Us",
                 color: "#92745a",
-                href: "mailto:srigurusailaser@gmail.com",
+                href: "mailto:info@sgslaser.in",
               },
             ].map(({ Icon, label, color, href }, idx) => (
               <motion.a
@@ -184,14 +184,14 @@ const Footer = () => {
             <p>9844327471</p>
           </a>
           <a
-            href="mailto:srigurusailaser@gmail.com"
+            href="mailto:info@sgslaser.in"
             className="flex items-center gap-3 text-gray-400 hover:text-secondary transition-colors group"
           >
             <Mail
               size={20}
               className="text-secondary shrink-0 group-hover:scale-110 transition-transform"
             />
-            <p>srigurusailaser@gmail.com</p>
+            <p>info@sgslaser.in</p>
           </a>
         </motion.div>
       </motion.div>

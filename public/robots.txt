@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://srigurusailaser.com/sitemap.xml
+Sitemap: https://sgslaser.in/sitemap.xml

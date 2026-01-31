@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Play, Zap } from "lucide-react";
 import { images } from "../assets/image-mapping";
 import Counter from "./Counter";
+import { optimizeCloudinaryUrl } from "../utils/image-optimizer";
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -174,12 +175,15 @@ const Hero = () => {
             {/* Main Image */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="col-start-1 col-end-9 row-start-1 row-end-8 rounded-[40px] overflow-hidden shadow-2xl relative"
+              className="col-start-1 col-end-9 row-start-1 row-end-8 rounded-[40px] overflow-hidden shadow-2xl relative bg-gray-100"
             >
               <img
-                src={randomImages[0]}
+                src={optimizeCloudinaryUrl(randomImages[0], { width: 800, height: 600 })}
                 className="w-full h-full object-cover"
                 alt="Laser Product"
+                width="800"
+                height="600"
+                fetchpriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </motion.div>
@@ -190,12 +194,15 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               whileHover={{ y: -10 }}
-              className="col-start-6 col-end-13 row-start-8 row-end-13 rounded-[32px] overflow-hidden shadow-2xl border-4 border-white z-20"
+              className="col-start-6 col-end-13 row-start-8 row-end-13 rounded-[32px] overflow-hidden shadow-2xl border-4 border-white z-20 bg-gray-100"
             >
               <img
-                src={randomImages[1]}
+                src={optimizeCloudinaryUrl(randomImages[1], { width: 600, height: 600 })}
                 className="w-full h-full object-cover"
                 alt="Machine"
+                width="600"
+                height="600"
+                loading="lazy"
               />
             </motion.div>
 
@@ -205,12 +212,15 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 1 }}
               whileHover={{ scale: 1.05 }}
-              className="col-start-9 col-end-13 row-start-1 row-end-5 rounded-[24px] overflow-hidden shadow-xl z-10"
+              className="col-start-9 col-end-13 row-start-1 row-end-5 rounded-[24px] overflow-hidden shadow-xl z-10 bg-gray-100"
             >
               <img
-                src={randomImages[2]}
+                src={optimizeCloudinaryUrl(randomImages[2], { width: 400, height: 400 })}
                 className="w-full h-full object-cover"
                 alt="Printing"
+                width="400"
+                height="400"
+                loading="lazy"
               />
             </motion.div>
 
@@ -220,12 +230,15 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.9, duration: 1 }}
               whileHover={{ scale: 1.05 }}
-              className="col-start-1 col-end-5 row-start-8 row-end-12 rounded-[24px] overflow-hidden shadow-xl z-10"
+              className="col-start-1 col-end-5 row-start-8 row-end-12 rounded-[24px] overflow-hidden shadow-xl z-10 bg-gray-100"
             >
               <img
-                src={randomImages[3]}
+                src={optimizeCloudinaryUrl(randomImages[3], { width: 400, height: 400 })}
                 className="w-full h-full object-cover"
                 alt="Acrylic"
+                width="400"
+                height="400"
+                loading="lazy"
               />
             </motion.div>
           </motion.div>
