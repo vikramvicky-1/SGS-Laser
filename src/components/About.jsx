@@ -13,7 +13,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-24 bg-white overflow-hidden min-h-[400px] md:min-h-0">
       <div className="max-w-[1200px] mx-auto px-4 md:px-2.5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <motion.div 

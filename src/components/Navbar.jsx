@@ -84,6 +84,8 @@ const Navbar = () => {
           <img
             src={optimizeCloudinaryUrl(images.logos.sgs, { height: 80, crop: 'limit' })}
             alt="Sri Guru Sai Laser"
+            width="160"
+            height="60"
             className="h-8 md:h-10 w-auto"
           />
           <p className="text-l font-bold">Sri Guru Sai Laser</p>

@@ -27,7 +27,7 @@ const Ticker = ({ reverse = false }) => {
   const tickerItems = [...services, ...services, ...services, ...services];
 
   return (
-    <div className="bg-primary py-4 md:py-6 overflow-hidden flex whitespace-nowrap border-y border-white/10 relative">
+    <div className="bg-primary h-[60px] md:h-[80px] overflow-hidden flex items-center whitespace-nowrap border-y border-white/10 relative">
       <motion.div
         className="flex items-center"
         animate={{

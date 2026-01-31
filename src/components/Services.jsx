@@ -133,11 +133,11 @@ const Services = () => {
               >
                 <div className="h-[280px] overflow-hidden relative bg-gray-100">
                   <img
-                    src={optimizeCloudinaryUrl(service.image, { width: 600, height: 400 })}
+                    src={optimizeCloudinaryUrl(service.image, { width: 400, height: 300 })}
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    width="600"
-                    height="400"
+                    width="400"
+                    height="300"
                     loading="lazy"
                   />
                   <div className="absolute top-4 left-4">

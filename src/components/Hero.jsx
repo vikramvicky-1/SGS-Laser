@@ -197,11 +197,11 @@ const Hero = () => {
               className="col-start-6 col-end-13 row-start-8 row-end-13 rounded-[32px] overflow-hidden shadow-2xl border-4 border-white z-20 bg-gray-100"
             >
               <img
-                src={optimizeCloudinaryUrl(randomImages[1], { width: 600, height: 600 })}
+                src={optimizeCloudinaryUrl(randomImages[1], { width: 400, height: 400 })}
                 className="w-full h-full object-cover"
                 alt="Machine"
-                width="600"
-                height="600"
+                width="400"
+                height="400"
                 loading="lazy"
               />
             </motion.div>

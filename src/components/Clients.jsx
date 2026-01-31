@@ -22,10 +22,10 @@ const Clients = () => {
         </motion.h2>
       </div>
 
-      <div className="flex whitespace-nowrap">
+      <div className="flex h-[80px] md:h-[100px] items-center whitespace-nowrap overflow-hidden">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 10, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 20, ease: "linear", repeat: Infinity }}
           className="flex items-center gap-12 md:gap-16 px-8"
         >
           {marqueeLogos.map((logo, index) => (
